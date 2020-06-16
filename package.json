@@ -1,0 +1,24 @@
+{
+  "name": "negative-hover",
+  "version": "1.0.0",
+  "description": "Apply class to all the items that aren't on hover",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "author": "Mark Mead",
+  "license": "MIT",
+  "keywords": [
+    "hover effect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markmead/negative-hover.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-preset-minify": "^0.5.1"
+  }
+}
