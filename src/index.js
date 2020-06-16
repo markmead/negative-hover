@@ -1,26 +1,26 @@
 export default function NegativeHover(data) {
   this.name = data.name || 'default'
-  this.inactiveClass = data.inactiveClass ? data.inactiveClass : 'inactive-group-target'
+  this.inactiveClass = data.inactiveClass ? data.inactiveClass : 'inactive-hover-target'
 }
 
 NegativeHover.prototype.init = function () {
-  const linkGroup = document.querySelector(`[data-negative-hover=${this.name}`)
-  const linkGroupLinks = [...linkGroup.querySelectorAll(`[data-negative-hover-target=${this.name}`)]
+  const group = document.querySelector(`[data-negative-hover=${this.name}`)
+  const targets = [...group.querySelectorAll(`[data-negative-hover-target=${this.name}`)]
   const self = this
 
-  linkGroupLinks.forEach(function (link, index) {
-    let activeLink
+  targets.forEach(function (target) {
+    let active
 
-    link.addEventListener('mouseover', function () {
-      activeLink = link
+    target.addEventListener('mouseover', function () {
+      active = target
 
-      linkGroupLinks.forEach(function (link) {
-        if (activeLink != link) link.classList.add(self.inactiveClass)
+      targets.forEach(function (target) {
+        if (active != target) target.classList.add(self.inactiveClass)
       })
     })
 
-    link.addEventListener('mouseleave', function () {
-      linkGroupLinks.forEach((link) => link.classList.remove(self.inactiveClass))
+    target.addEventListener('mouseleave', function () {
+      targets.forEach((target) => target.classList.remove(self.inactiveClass))
     })
   })
 }

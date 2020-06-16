@@ -20,3 +20,7 @@ import NegativeHover from 'negative-hover'
 
 new NegativeHover({}).init()
 ```
+
+### Example (with docs)
+
+[Negative Hover Example](https://mead.im/negative-hover)

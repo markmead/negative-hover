@@ -1,6 +1,6 @@
 {
   "name": "negative-hover",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Apply class to all the items that aren't on hover",
   "main": "index.js",
   "scripts": {
