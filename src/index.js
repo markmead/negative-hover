@@ -3,9 +3,9 @@ export default function NegativeHover(data) {
   this.inactiveClass = data.inactiveClass ? data.inactiveClass : 'inactive-group-target'
 }
 
-LinkHover.prototype.init = function () {
-  const linkGroup = document.querySelector(`[data-group-hover=${this.name}`)
-  const linkGroupLinks = [...linkGroup.querySelectorAll(`[data-group-hover-target=${this.name}`)]
+NegativeHover.prototype.init = function () {
+  const linkGroup = document.querySelector(`[data-negative-hover=${this.name}`)
+  const linkGroupLinks = [...linkGroup.querySelectorAll(`[data-negative-hover-target=${this.name}`)]
   const self = this
 
   linkGroupLinks.forEach(function (link, index) {
