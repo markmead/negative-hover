@@ -4,8 +4,8 @@ export default function NegativeHover(data) {
 }
 
 NegativeHover.prototype.init = function () {
-  const group = document.querySelector(`[data-negative-hover=${this.name}`)
-  const targets = [...group.querySelectorAll(`[data-negative-hover-target=${this.name}`)]
+  const group = document.querySelector(`[data-negative-hover='${this.name}'`)
+  const targets = [...group.querySelectorAll(`[data-negative-hover-target='${this.name}'`)]
   const self = this
 
   targets.forEach(function (target) {
