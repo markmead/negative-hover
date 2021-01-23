@@ -1,6 +1,6 @@
 {
   "name": "negative-hover",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Apply class to all the items that aren't on hover",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,9 @@
   "author": "Mark Mead",
   "license": "MIT",
   "keywords": [
-    "hover effect"
+    "hover effect",
+    "javascript mouseover",
+    "inactive hover effect"
   ],
   "repository": {
     "type": "git",
