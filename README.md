@@ -27,7 +27,7 @@ yarn add -D negative-hover
 ## Usage
 
 ```js
-import { NegativeHover } from 'negative-hover'
+import NegativeHover from 'negative-hover'
 
 new NegativeHover('#parentTarget', { target: 'a', css: 'inactive' })
 ```
