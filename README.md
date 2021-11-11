@@ -1,37 +1,60 @@
-# Negative Hover
-
-Apply classes to all elements within a parent that AREN'T on hover
-
 ![](https://img.shields.io/bundlephobia/min/negative-hover)
 ![](https://img.shields.io/npm/v/negative-hover)
 ![](https://img.shields.io/npm/dt/negative-hover)
 ![](https://img.shields.io/github/license/markmead/negative-hover)
 
+# Negative Hover
+
+It's a hover effect but in reverse.
+
+You can apply a classes to all targeted elements that are currently not on hover within a parent element.
+
 ## Install
 
+### Packages
+
 ```shell
-npm install negative-hover
-yarn add negative-hover
+npm i -D negative-hover
+yarn add -D negative-hover
+```
+
+### CDN
+
+```html
+<script src="https://unpkg.com/negative-hover@latest/dist/index.js"></script>
 ```
 
 ## Usage
 
 ```js
-import NegativeHover from 'negative-hover'
+import { NegativeHover } from 'negative-hover'
 
-new NegativeHover('#parentTarget', {
-  target: 'a',
-  css: 'inactive',
-}).init()
+new NegativeHover('#parentTarget', { target: 'a', css: 'inactive' })
 ```
 
-This will look for all `<a>` tags within `#parentTarget` and apply the `inactive` CSS class if they aren't on hover
+### Markup
 
-### Options
+```html
+<ul id="parentTarget">
+  <li>
+    <a href="/">Home</a>
+  </li>
 
-| Options  | Type                          | What it does                                                    |
-| -------- | ----------------------------- | --------------------------------------------------------------- |
-| `target` | string                        | is passed `querySelectorAll` on the parent element              |
-| `css`    | string or an array of strings | is the css class(es) that will be added to each inactive target |
+  <li>
+    <a href="/about">About</a>
+  </li>
 
-The first argument is the parent element and is required
+  <li>
+    <a href="/contact">Contact</a>
+  </li>
+</ul>
+```
+
+## Options
+
+It requires a HTML indentifier for the parent. I'd suggest using an ID.
+
+| Option | Type          | Job                                       |
+| ------ | ------------- | ----------------------------------------- |
+| Target | String        | Finds all matching elements in the parent |
+| CSS    | Array<String> | CSS class or class names to apply         |
