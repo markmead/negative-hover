@@ -7,7 +7,9 @@
 
 It's a hover effect but in reverse.
 
-You can apply a classes to all targeted elements that are currently not on hover within a parent element.
+Apply class(es) to all targeted elements that are currently not on hover within a parent element.
+
+![Screen Recording 2021-11-12 at 09 01 10](https://user-images.githubusercontent.com/50486078/141442043-c4472f73-0a44-4142-9cdc-e2a3443e3576.gif)
 
 ## Install
 
