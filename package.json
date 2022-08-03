@@ -10,8 +10,8 @@
   ],
   "author": "Mark Mead",
   "license": "MIT",
-  "main": "dist/hover.cjs.js",
   "module": "dist/hover.esm.js",
+  "unpkg": "dist/hover.min.js",
   "scripts": {
     "build": "node scripts/build.js"
   },
