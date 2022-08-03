@@ -1,11 +1,14 @@
-import { Data } from '../src/idata'
+interface HoverInterface {
+  target: string
+  css: string[] | string
+}
 
 export default class NegativeHover {
   parentElement: HTMLElement | null
   targetElements!: Array<HTMLElement>
   inactiveClass: string[] | string
 
-  constructor(private parent: string, private data: Data) {
+  constructor(private parent: string, private data: HoverInterface) {
     this.parentElement = document.querySelector(this.parent)
     this.inactiveClass = this.data.css
 

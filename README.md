@@ -1,62 +1,83 @@
-![](https://img.shields.io/bundlephobia/min/negative-hover)
-![](https://img.shields.io/npm/v/negative-hover)
-![](https://img.shields.io/npm/dt/negative-hover)
-![](https://img.shields.io/github/license/markmead/negative-hover)
-
 # Negative Hover
 
 It's a hover effect but in reverse.
 
 Apply class(es) to all targeted elements that are currently not on hover within a parent element.
 
-![Screen Recording 2021-11-12 at 09 01 10](https://user-images.githubusercontent.com/50486078/141442043-c4472f73-0a44-4142-9cdc-e2a3443e3576.gif)
+![Showcase of package](https://user-images.githubusercontent.com/50486078/141442043-c4472f73-0a44-4142-9cdc-e2a3443e3576.gif)
 
-## Install
-
-### Packages
+### Using with a Package Manager
 
 ```shell
-npm i -D negative-hover
 yarn add -D negative-hover
+
+npm install -D negative-hover
 ```
-
-### CDN
-
-```html
-<script src="https://unpkg.com/negative-hover@latest/dist/index.js"></script>
-```
-
-## Usage
 
 ```js
 import NegativeHover from 'negative-hover'
 
-new NegativeHover('#parentTarget', { target: 'a', css: 'inactive' })
+new NegativeHover('#parentElement', { target: '...', css: '...' })
 ```
 
-### Markup
+### CDN
+
+For this package to work with a CDN you have to call the `NegativeHover` class on the window object.
 
 ```html
-<ul id="parentTarget">
-  <li>
-    <a href="/">Home</a>
-  </li>
+<script
+  defer
+  src="https://unpkg.com/negative-hover@latest/dist/index.js"
+></script>
 
-  <li>
-    <a href="/about">About</a>
-  </li>
-
-  <li>
-    <a href="/contact">Contact</a>
-  </li>
-</ul>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    new window['NegativeHover']('#parentElement', {})
+  })
+</script>
 ```
+
+🚀 You can still use the `target` and `classes` options when using the CDN.
 
 ## Options
 
-It requires a HTML indentifier for the parent. I'd suggest using an ID.
+There are three options that you can pass to `new NegativeHover({})`, but they are both required.
 
-| Option | Type          | Job                                       |
-| ------ | ------------- | ----------------------------------------- |
-| Target | String        | Finds all matching elements in the parent |
-| CSS    | Array<String> | CSS class or class names to apply         |
+```js
+new NegativeHover('#parentElement', { target: '...', css: '...' })
+```
+
+### Wrapping
+
+This is the wrapping HTML element identifier that is used to group the target elements.
+
+For example, the `<ul id="list">` could be used as the wrapping element for the `<li>` elements.
+
+```html
+<ul id="list">
+  <li>Hello</li>
+  <li>Friend</li>
+  <li>How</li>
+  <li>Are</li>
+  <li>You?</li>
+</ul>
+```
+
+_Uses `document.querySelector(...)`._
+
+### Target
+
+This is the HTML elements identifier that you want to target.
+
+_Uses `document.querySelectorAll(...)`._
+
+### CSS
+
+Pass a string of CSS class names that will be applied to the elements that are not on hover.
+
+## Stats
+
+![](https://img.shields.io/bundlephobia/min/negative-hover)
+![](https://img.shields.io/npm/v/negative-hover)
+![](https://img.shields.io/npm/dt/negative-hover)
+![](https://img.shields.io/github/license/markmead/negative-hover)
