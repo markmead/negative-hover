@@ -1,10 +1,9 @@
 # Negative Hover
 
-It's a hover effect but in reverse.
+Hover effect but in reverse (spotlight hover) 🔦
 
-Apply class(es) to all targeted elements that are currently not on hover within a parent element.
-
-![Showcase of package](https://user-images.githubusercontent.com/50486078/141442043-c4472f73-0a44-4142-9cdc-e2a3443e3576.gif)
+Apply classes to all targeted elements that are currently not on hover within a
+parent element.
 
 ### Using with a Package Manager
 
@@ -22,7 +21,8 @@ new NegativeHover('#parentElement', { target: '...', css: '...' })
 
 ### CDN
 
-For this package to work with a CDN you have to call the `NegativeHover` class on the window object.
+For this package to work with a CDN you have to call the `NegativeHover` class
+on the window object.
 
 ```html
 <script
@@ -31,9 +31,10 @@ For this package to work with a CDN you have to call the `NegativeHover` class o
 ></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    new window['NegativeHover']('#parentElement', {})
-  })
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => new window['NegativeHover']('#parentElement', {})
+  )
 </script>
 ```
 
@@ -41,7 +42,8 @@ For this package to work with a CDN you have to call the `NegativeHover` class o
 
 ## Options
 
-There are three options that you can pass to `new NegativeHover({})`, but they are both required.
+There are three options that you can pass to `new NegativeHover({})`, but they
+are both required.
 
 ```js
 new NegativeHover('#parentElement', { target: '...', css: '...' })
@@ -49,9 +51,11 @@ new NegativeHover('#parentElement', { target: '...', css: '...' })
 
 ### Wrapping
 
-This is the wrapping HTML element identifier that is used to group the target elements.
+This is the wrapping HTML element identifier that is used to group the target
+elements.
 
-For example, the `<ul id="list">` could be used as the wrapping element for the `<li>` elements.
+For example, the `<ul id="list">` could be used as the wrapping element for the
+`<li>` elements.
 
 ```html
 <ul id="list">
@@ -73,7 +77,8 @@ _Uses `document.querySelectorAll(...)`._
 
 ### CSS
 
-Pass a string of CSS class names that will be applied to the elements that are not on hover.
+Pass a string of CSS class names that will be applied to the elements that are
+not on hover.
 
 ## Stats
 

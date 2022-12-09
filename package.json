@@ -1,12 +1,12 @@
 {
   "name": "negative-hover",
-  "version": "1.2.2",
-  "description": "Toggle CSS class names on items within a group that aren't on hover 🔄",
+  "version": "1.2.3",
+  "description": "Hover effect but in reverse (spotlight hover) 🔦",
   "keywords": [
-    "Hover",
     "Hover Effect",
-    "JavaScript Hover",
-    "Mouseover"
+    "Spotlight Hover",
+    "JavaScript Hover Effect",
+    "JavaScript Mouseover"
   ],
   "author": "Mark Mead",
   "license": "MIT",
@@ -16,10 +16,6 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "esbuild": "^0.12.22"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/markmead/custom-cursor.git"
+    "esbuild": "^0.16.2"
   }
 }
